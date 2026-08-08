@@ -52,7 +52,7 @@ function computeSlabRows(taxableIncome, slabs) {
 function SectionLabel({ letter, text }) {
   return (
     <div className="flex items-center gap-2 mb-2">
-      <span className="w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-[10px] font-bold flex items-center justify-center shrink-0">
+      <span className="w-5 h-5 rounded-full bg-brand-100 text-brand-700 text-[10px] font-bold flex items-center justify-center shrink-0">
         {letter}
       </span>
       <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">{text}</p>
@@ -74,9 +74,9 @@ function LineRow({ label, amount, green, muted }) {
 function ResultBox({ label, amount, indigo }) {
   return (
     <div className={`flex justify-between items-center rounded-lg px-3 py-2 mt-1.5
-      ${indigo ? 'bg-indigo-50 border border-indigo-100' : 'bg-gray-100 border border-gray-200'}`}>
-      <span className={`text-xs font-semibold ${indigo ? 'text-indigo-700' : 'text-gray-500'}`}>= {label}</span>
-      <span className={`text-sm font-bold ${indigo ? 'text-indigo-800' : 'text-gray-800'}`}>{amount}</span>
+      ${indigo ? 'bg-brand-50 border border-brand-100' : 'bg-gray-100 border border-gray-200'}`}>
+      <span className={`text-xs font-semibold ${indigo ? 'text-brand-700' : 'text-gray-500'}`}>= {label}</span>
+      <span className={`text-sm font-bold ${indigo ? 'text-brand-800' : 'text-gray-800'}`}>{amount}</span>
     </div>
   )
 }
@@ -131,7 +131,7 @@ export default function TaxPreviewPanel({ data }) {
       {/* Header */}
       <div className="flex items-center justify-between px-5 py-3.5 border-b border-gray-100">
         <p className="text-sm font-bold text-gray-900">Your Live Tax Estimate</p>
-        <span className="text-xs font-semibold text-indigo-600 bg-indigo-50 border border-indigo-100 rounded-full px-2.5 py-0.5">
+        <span className="text-xs font-semibold text-brand-600 bg-brand-50 border border-brand-100 rounded-full px-2.5 py-0.5">
           FY 2025-26
         </span>
       </div>
@@ -146,7 +146,7 @@ export default function TaxPreviewPanel({ data }) {
               onClick={() => setUserPickedRegime(val)}
               className={`py-1.5 px-3 text-xs font-semibold transition-all rounded-full
                 ${regime === val
-                  ? 'bg-white text-indigo-700 shadow-sm'
+                  ? 'bg-white text-brand-700 shadow-sm'
                   : 'text-gray-500 hover:text-gray-700'}`}
             >
               {label}
@@ -160,7 +160,7 @@ export default function TaxPreviewPanel({ data }) {
           <button
             type="button"
             onClick={() => setUserPickedRegime(regime === 'new' ? 'old' : 'new')}
-            className="text-[11px] text-indigo-500 hover:text-indigo-700 underline decoration-dotted underline-offset-2 shrink-0"
+            className="text-[11px] text-brand-500 hover:text-brand-700 underline decoration-dotted underline-offset-2 shrink-0"
           >
             Compare {regime === 'new' ? 'old' : 'new'} regime
           </button>
@@ -181,10 +181,10 @@ export default function TaxPreviewPanel({ data }) {
 
           {/* Hero gradient card */}
           {computeSuccess && (
-            <div className="mx-4 mt-3 rounded-xl bg-gradient-to-br from-indigo-600 via-indigo-700 to-purple-700 p-4 text-white">
-              <p className="text-xs text-indigo-200 font-medium mb-1">Estimated Tax Payable</p>
+            <div className="mx-4 mt-3 rounded-xl bg-brand-700 p-4 text-white">
+              <p className="text-xs text-brand-200 font-medium mb-1">Estimated Tax Payable</p>
               <p className="text-2xl font-black tracking-tight">{fmt(activeData.totalTax)}</p>
-              <p className="text-xs text-indigo-300 mt-1">
+              <p className="text-xs text-brand-300 mt-1">
                 On annual income of {fmt(activeData.grossIncome || 0)}
               </p>
             </div>
@@ -269,7 +269,7 @@ export default function TaxPreviewPanel({ data }) {
                     <div
                       key={i}
                       className={`grid grid-cols-4 gap-1 px-2.5 py-1.5 text-[11px]
-                        ${row.active ? 'bg-indigo-50/60 text-indigo-700 font-medium' : 'text-gray-400'}`}
+                        ${row.active ? 'bg-brand-50/60 text-brand-700 font-medium' : 'text-gray-400'}`}
                     >
                       <span className="truncate">{row.label}</span>
                       <span className="text-center">{row.rate}</span>
@@ -296,8 +296,8 @@ export default function TaxPreviewPanel({ data }) {
               </div>
 
               {/* Total Tax */}
-              <div className="mt-2 flex justify-between items-center bg-indigo-600 rounded-xl px-3 py-2.5">
-                <span className="text-xs font-bold text-indigo-200">Total Tax Payable</span>
+              <div className="mt-2 flex justify-between items-center bg-brand-600 rounded-xl px-3 py-2.5">
+                <span className="text-xs font-bold text-brand-200">Total Tax Payable</span>
                 <span className="text-lg font-black text-white">{fmt(activeData.totalTax)}</span>
               </div>
             </div>

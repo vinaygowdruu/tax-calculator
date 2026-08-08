@@ -62,8 +62,8 @@ export default function S11_HomeLoan({ data, update, goNext, goBack, reset, show
       <div className="space-y-4">
         <div>
           <div className="flex items-center gap-2 mb-2">
-            <span className="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-indigo-100 text-sm">🏡</span>
-            <p className="text-xs font-medium text-indigo-600 uppercase tracking-wide">Home Loan</p>
+            <span className="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-brand-100 text-sm">🏡</span>
+            <p className="text-xs font-medium text-brand-600 uppercase tracking-wide">Home Loan</p>
           </div>
           <h2 className="text-xl font-bold text-gray-900 leading-tight">
             Do you have a home loan for a house you currently live in?
@@ -84,7 +84,7 @@ export default function S11_HomeLoan({ data, update, goNext, goBack, reset, show
                 onClick={() => { update({ hasHomeLoan: val, loanOwnership: null, homeLoanInterest: '' }); setErrors({}) }}
                 className={`flex-1 py-2 rounded-xl border-2 text-sm font-semibold transition-all
                   ${data.hasHomeLoan === val
-                    ? 'border-indigo-600 bg-indigo-50 text-indigo-700'
+                    ? 'border-brand-600 bg-brand-50 text-brand-700'
                     : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'}`}
               >
                 {label}
@@ -109,7 +109,7 @@ export default function S11_HomeLoan({ data, update, goNext, goBack, reset, show
                     <label
                       key={opt.value}
                       className={`flex items-center gap-3 p-3 rounded-xl border-2 cursor-pointer transition-all
-                        ${selected ? 'border-indigo-600 bg-indigo-50' : 'border-gray-200 bg-white hover:border-gray-300'}`}
+                        ${selected ? 'border-brand-600 bg-brand-50' : 'border-gray-200 bg-white hover:border-gray-300'}`}
                     >
                       <input
                         type="radio"
@@ -120,12 +120,12 @@ export default function S11_HomeLoan({ data, update, goNext, goBack, reset, show
                         className="sr-only"
                       />
                       <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center flex-shrink-0
-                        ${selected ? 'border-indigo-600 bg-indigo-600' : 'border-gray-300 bg-white'}`}
+                        ${selected ? 'border-brand-600 bg-brand-600' : 'border-gray-300 bg-white'}`}
                         aria-hidden="true"
                       >
                         {selected && <div className="w-1.5 h-1.5 rounded-full bg-white" />}
                       </div>
-                      <span className={`text-sm font-medium ${selected ? 'text-indigo-900' : 'text-gray-900'}`}>{opt.label}</span>
+                      <span className={`text-sm font-medium ${selected ? 'text-brand-900' : 'text-gray-900'}`}>{opt.label}</span>
                     </label>
                   )
                 })}
@@ -168,7 +168,7 @@ export default function S11_HomeLoan({ data, update, goNext, goBack, reset, show
         <button
           type="button"
           onClick={handleNext}
-          className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 active:from-indigo-800 active:to-purple-800 text-white font-bold py-3 px-6 rounded-xl text-sm transition-all shadow-md shadow-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          className="w-full bg-brand-600 hover:bg-brand-700 active:bg-brand-800 text-white font-bold py-3 px-6 rounded-xl text-sm transition-all shadow-sm shadow-brand-900/20 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
         >
           Continue →
         </button>

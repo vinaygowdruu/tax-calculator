@@ -42,11 +42,11 @@ export default function SectionA_Verdict({ results, data }) {
   const sentence = getVerdictSentence(results, data)
 
   return (
-    <div className={`rounded-2xl p-4 ${isNew ? 'bg-indigo-600' : 'bg-emerald-600'}`}>
+    <div className={`rounded-2xl p-4 ${isNew ? 'bg-brand-600' : 'bg-emerald-600'}`}>
       {/* Badge */}
       <div className="mb-2">
         <span className={`inline-flex items-center gap-1.5 text-xs font-semibold rounded-full px-3 py-1
-          ${isNew ? 'bg-indigo-500 text-indigo-100' : 'bg-emerald-500 text-emerald-100'}`}>
+          ${isNew ? 'bg-brand-500 text-brand-100' : 'bg-emerald-500 text-emerald-100'}`}>
           <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
           </svg>
@@ -63,22 +63,22 @@ export default function SectionA_Verdict({ results, data }) {
       {isZeroTax ? (
         <div className="mb-3">
           <p className="text-3xl font-black text-white">₹0 tax</p>
-          <p className="text-indigo-200 text-sm mt-0.5">You pay zero tax this year</p>
+          <p className="text-brand-200 text-sm mt-0.5">You pay zero tax this year</p>
         </div>
       ) : (
         <div className="mb-3">
-          <p className={`text-sm font-medium mb-0.5 ${isNew ? 'text-indigo-200' : 'text-emerald-200'}`}>
+          <p className={`text-sm font-medium mb-0.5 ${isNew ? 'text-brand-200' : 'text-emerald-200'}`}>
             You save
           </p>
           <p className="text-3xl font-black text-white">{fmt(savings)}</p>
-          <p className={`text-sm mt-0.5 ${isNew ? 'text-indigo-200' : 'text-emerald-200'}`}>
+          <p className={`text-sm mt-0.5 ${isNew ? 'text-brand-200' : 'text-emerald-200'}`}>
             compared to the {isNew ? 'old' : 'new'} regime
           </p>
         </div>
       )}
 
       {/* Personalised explanation */}
-      <div className={`rounded-xl p-3 ${isNew ? 'bg-indigo-700/60' : 'bg-emerald-700/60'}`}>
+      <div className={`rounded-xl p-3 ${isNew ? 'bg-brand-700/60' : 'bg-emerald-700/60'}`}>
         <p className="text-sm text-white leading-relaxed">{sentence}</p>
       </div>
     </div>

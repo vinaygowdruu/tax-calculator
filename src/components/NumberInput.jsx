@@ -51,7 +51,7 @@ export default function NumberInput({
           required={required}
           aria-describedby={hint ? `${id}-hint` : undefined}
           className={`block w-full rounded-xl border py-2.5 text-sm text-gray-900
-            focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 focus:outline-none
+            focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:outline-none
             placeholder:text-gray-400
             ${isValid ? 'border-green-300 bg-green-50/30' : 'border-gray-200'}
             ${prefix ? 'pl-8 pr-9' : 'px-3'}`}

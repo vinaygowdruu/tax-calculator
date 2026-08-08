@@ -86,8 +86,8 @@ export default function S05_SalaryComponents({ data, update, goNext, goBack, res
       <div className="space-y-4">
         <div>
           <div className="flex items-center gap-2 mb-1">
-            <span className="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-indigo-100 text-sm">📋</span>
-            <p className="text-xs font-medium text-indigo-600 uppercase tracking-wide">Salary Components</p>
+            <span className="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-brand-100 text-sm">📋</span>
+            <p className="text-xs font-medium text-brand-600 uppercase tracking-wide">Salary Components</p>
           </div>
           <h2 className="text-xl font-bold text-gray-900 leading-tight">
             Does your salary slip show any of these?
@@ -102,8 +102,8 @@ export default function S05_SalaryComponents({ data, update, goNext, goBack, res
           {COMPONENTS.map(({ key, label, tag, emoji, description }) => {
             const checked = data[key]
             return (
-              <div key={key} className={`rounded-xl border-2 overflow-hidden transition-all ${checked ? 'border-indigo-600' : 'border-gray-200'}`}>
-                <label className={`flex items-start gap-3 p-3 cursor-pointer ${checked ? 'bg-indigo-50' : 'bg-white hover:bg-gray-50'}`}>
+              <div key={key} className={`rounded-xl border-2 overflow-hidden transition-all ${checked ? 'border-brand-600' : 'border-gray-200'}`}>
+                <label className={`flex items-start gap-3 p-3 cursor-pointer ${checked ? 'bg-brand-50' : 'bg-white hover:bg-gray-50'}`}>
                   <input
                     type="checkbox"
                     checked={checked}
@@ -112,7 +112,7 @@ export default function S05_SalaryComponents({ data, update, goNext, goBack, res
                   />
                   {/* Custom checkbox */}
                   <div className={`mt-0.5 w-5 h-5 rounded border-2 flex items-center justify-center flex-shrink-0 transition-colors
-                    ${checked ? 'border-indigo-600 bg-indigo-600' : 'border-gray-300 bg-white'}`}
+                    ${checked ? 'border-brand-600 bg-brand-600' : 'border-gray-300 bg-white'}`}
                     aria-hidden="true"
                   >
                     {checked && (
@@ -124,7 +124,7 @@ export default function S05_SalaryComponents({ data, update, goNext, goBack, res
                   <div>
                     <div className="flex items-center gap-2 flex-wrap">
                       <span className="text-base" aria-hidden="true">{emoji}</span>
-                      <span className={`text-sm font-semibold ${checked ? 'text-indigo-900' : 'text-gray-900'}`}>{label}</span>
+                      <span className={`text-sm font-semibold ${checked ? 'text-brand-900' : 'text-gray-900'}`}>{label}</span>
                       <span className="text-xs text-gray-400 font-normal">{tag}</span>
                     </div>
                     <p className="text-xs text-gray-500 mt-0.5">{description}</p>
@@ -133,7 +133,7 @@ export default function S05_SalaryComponents({ data, update, goNext, goBack, res
 
                 {/* Sub-input */}
                 {checked && (
-                  <div className="px-4 pb-4 bg-indigo-50 border-t border-indigo-100">
+                  <div className="px-4 pb-4 bg-brand-50 border-t border-brand-100">
                     {key === 'hasHRA' && (
                       <div className="mt-3">
                         <NumberInput
@@ -188,7 +188,7 @@ export default function S05_SalaryComponents({ data, update, goNext, goBack, res
         <button
           type="button"
           onClick={handleNext}
-          className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 active:from-indigo-800 active:to-purple-800 text-white font-bold py-3 px-6 rounded-xl text-sm transition-all shadow-md shadow-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          className="w-full bg-brand-600 hover:bg-brand-700 active:bg-brand-800 text-white font-bold py-3 px-6 rounded-xl text-sm transition-all shadow-sm shadow-brand-900/20 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
         >
           Continue →
         </button>

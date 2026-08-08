@@ -4,12 +4,17 @@
 
 @layer base {
   body {
-    @apply bg-slate-50 text-gray-900 antialiased;
-    font-feature-settings: 'kern' 1, 'liga' 1;
+    @apply bg-[#F5F7FA] text-gray-900 antialiased;
+    /* Tabular figures keep rupee amounts aligned column-to-column. */
+    font-feature-settings: 'kern' 1, 'liga' 1, 'tnum' 1;
   }
 
   * {
     @apply transition-colors duration-150;
+  }
+
+  ::selection {
+    @apply bg-brand-600 text-white;
   }
 
   input[type="text"],
@@ -19,7 +24,12 @@
 
   input[type="text"]:focus,
   input[type="number"]:focus {
-    @apply ring-2 ring-indigo-500/20 ring-offset-0 border-indigo-500;
+    @apply ring-2 ring-brand-500/20 ring-offset-0 border-brand-500;
+  }
+
+  /* Consistent keyboard-focus treatment across every interactive control. */
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand-500/40 ring-offset-1;
   }
 }
 

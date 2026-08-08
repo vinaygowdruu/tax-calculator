@@ -5,10 +5,10 @@ function Suggestion({ icon, text, highlight }) {
   return (
     <div className={`flex flex-col gap-2 p-3 rounded-xl border
       ${highlight
-        ? 'bg-indigo-50 border-indigo-200'
+        ? 'bg-brand-50 border-brand-200'
         : 'bg-white border-gray-200'}`}>
       <span className="text-xl" aria-hidden="true">{icon}</span>
-      <p className={`text-xs leading-relaxed ${highlight ? 'text-indigo-800' : 'text-gray-700'}`}>
+      <p className={`text-xs leading-relaxed ${highlight ? 'text-brand-800' : 'text-gray-700'}`}>
         {text}
       </p>
     </div>

@@ -28,10 +28,10 @@ const QUESTIONS = [
 
 function InsuranceCard({ title, subtitle, cap, checked, onToggle, amount, onAmountChange, amountError, children }) {
   return (
-    <div className={`rounded-xl border-2 overflow-hidden transition-all ${checked ? 'border-indigo-500' : 'border-gray-200'}`}>
+    <div className={`rounded-xl border-2 overflow-hidden transition-all ${checked ? 'border-brand-500' : 'border-gray-200'}`}>
       {/* Card header */}
-      <div className={`px-4 py-3 ${checked ? 'bg-indigo-50' : 'bg-gray-50'}`}>
-        <p className={`text-sm font-semibold ${checked ? 'text-indigo-900' : 'text-gray-800'}`}>{title}</p>
+      <div className={`px-4 py-3 ${checked ? 'bg-brand-50' : 'bg-gray-50'}`}>
+        <p className={`text-sm font-semibold ${checked ? 'text-brand-900' : 'text-gray-800'}`}>{title}</p>
         {subtitle && <p className="text-xs text-gray-500 mt-0.5">{subtitle}</p>}
       </div>
 
@@ -46,7 +46,7 @@ function InsuranceCard({ title, subtitle, cap, checked, onToggle, amount, onAmou
               onClick={() => onToggle(val)}
               className={`flex-1 py-2 rounded-lg border-2 text-sm font-semibold transition-all
                 ${checked === val
-                  ? 'border-indigo-600 bg-indigo-600 text-white'
+                  ? 'border-brand-600 bg-brand-600 text-white'
                   : 'border-gray-200 bg-white text-gray-600 hover:border-gray-300'}`}
             >
               {label}
@@ -57,7 +57,7 @@ function InsuranceCard({ title, subtitle, cap, checked, onToggle, amount, onAmou
 
       {/* Amount — only shown when Yes */}
       {checked === true && (
-        <div className="px-4 pb-4 bg-indigo-50 border-t border-indigo-100 space-y-2">
+        <div className="px-4 pb-4 bg-brand-50 border-t border-brand-100 space-y-2">
           <div className="pt-3">
             <NumberInput
               id={`premium-${title}`}
@@ -114,8 +114,8 @@ export default function S10_HealthInsurance({ data, update, goNext, goBack, rese
 
         <div>
           <div className="flex items-center gap-2 mb-2">
-            <span className="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-indigo-100 text-sm">🏥</span>
-            <p className="text-xs font-medium text-indigo-600 uppercase tracking-wide">Health Insurance</p>
+            <span className="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-brand-100 text-sm">🏥</span>
+            <p className="text-xs font-medium text-brand-600 uppercase tracking-wide">Health Insurance</p>
           </div>
           <h2 className="text-xl font-bold text-gray-900 leading-tight">
             Do you pay for health insurance?
@@ -131,7 +131,7 @@ export default function S10_HealthInsurance({ data, update, goNext, goBack, rese
         {/* Card 1 — Self */}
         <div className="space-y-1">
           <div className="flex items-center gap-2 mb-1">
-            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-bold">1</span>
+            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-brand-100 text-brand-700 text-xs font-bold">1</span>
             <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Your policy</p>
           </div>
           <InsuranceCard
@@ -149,7 +149,7 @@ export default function S10_HealthInsurance({ data, update, goNext, goBack, rese
         {/* Card 2 — Parents */}
         <div className="space-y-1">
           <div className="flex items-center gap-2 mb-1">
-            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-bold">2</span>
+            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-brand-100 text-brand-700 text-xs font-bold">2</span>
             <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Your parents' policy</p>
           </div>
           <InsuranceCard
@@ -174,7 +174,7 @@ export default function S10_HealthInsurance({ data, update, goNext, goBack, rese
                     onClick={() => { update({ parentsAbove60: val }); setErrors(p => ({ ...p, parentsAbove60: undefined })) }}
                     className={`flex-1 py-2 rounded-lg border-2 text-sm font-semibold transition-all
                       ${data.parentsAbove60 === val
-                        ? 'border-indigo-600 bg-indigo-600 text-white'
+                        ? 'border-brand-600 bg-brand-600 text-white'
                         : 'border-gray-200 bg-white text-gray-600 hover:border-gray-300'}`}
                   >
                     {label}
@@ -206,7 +206,7 @@ export default function S10_HealthInsurance({ data, update, goNext, goBack, rese
         <button
           type="button"
           onClick={handleNext}
-          className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 active:from-indigo-800 active:to-purple-800 text-white font-bold py-3 px-6 rounded-xl text-sm transition-all shadow-md shadow-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          className="w-full bg-brand-600 hover:bg-brand-700 active:bg-brand-800 text-white font-bold py-3 px-6 rounded-xl text-sm transition-all shadow-sm shadow-brand-900/20 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
         >
           Continue →
         </button>

@@ -95,7 +95,7 @@ function fmtAnnual(n) {
 
 function FreqToggle({ freq, onChange }) {
   return (
-    <div className="inline-flex rounded-lg border border-indigo-200 overflow-hidden bg-indigo-50/50 p-0.5 gap-0.5">
+    <div className="inline-flex rounded-lg border border-brand-200 overflow-hidden bg-brand-50/50 p-0.5 gap-0.5">
       {[{ val: 'monthly', label: 'Per month' }, { val: 'annual', label: 'Per year' }].map(({ val, label }) => (
         <button
           key={val}
@@ -103,8 +103,8 @@ function FreqToggle({ freq, onChange }) {
           onClick={() => onChange(val)}
           className={`px-3 py-1 text-xs font-semibold rounded-md transition-all
             ${freq === val
-              ? 'bg-white text-indigo-700 shadow-sm'
-              : 'text-indigo-400 hover:text-indigo-600'}`}
+              ? 'bg-white text-brand-700 shadow-sm'
+              : 'text-brand-400 hover:text-brand-600'}`}
         >
           {label}
         </button>
@@ -219,8 +219,8 @@ export default function S09_TaxSavingInvestments({ data, update, goNext, goBack,
       <div className="space-y-4">
         <div>
           <div className="flex items-center gap-2 mb-1">
-            <span className="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-indigo-100 text-sm">📊</span>
-            <p className="text-xs font-medium text-indigo-600 uppercase tracking-wide">Tax Saving Investments</p>
+            <span className="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-brand-100 text-sm">📊</span>
+            <p className="text-xs font-medium text-brand-600 uppercase tracking-wide">Tax Saving Investments</p>
           </div>
           <h2 className="text-xl font-bold text-gray-900 leading-tight">
             Do you make any of these investments?
@@ -241,8 +241,8 @@ export default function S09_TaxSavingInvestments({ data, update, goNext, goBack,
             const freq = frequencies[key] || 'annual'
             const storedAnnual = Number(data.investments80C[key]) || 0
             return (
-              <div key={key} className={`rounded-xl border-2 overflow-hidden transition-all ${checked ? 'border-indigo-600' : 'border-gray-200'}`}>
-                <label className={`flex items-start gap-3 p-3 cursor-pointer ${checked ? 'bg-indigo-50' : 'bg-white hover:bg-gray-50'}`}>
+              <div key={key} className={`rounded-xl border-2 overflow-hidden transition-all ${checked ? 'border-brand-600' : 'border-gray-200'}`}>
+                <label className={`flex items-start gap-3 p-3 cursor-pointer ${checked ? 'bg-brand-50' : 'bg-white hover:bg-gray-50'}`}>
                   <input
                     type="checkbox"
                     checked={checked}
@@ -250,7 +250,7 @@ export default function S09_TaxSavingInvestments({ data, update, goNext, goBack,
                     className="sr-only"
                   />
                   <div className={`mt-0.5 w-5 h-5 rounded border-2 flex items-center justify-center flex-shrink-0 transition-colors
-                    ${checked ? 'border-indigo-600 bg-indigo-600' : 'border-gray-300 bg-white'}`}
+                    ${checked ? 'border-brand-600 bg-brand-600' : 'border-gray-300 bg-white'}`}
                     aria-hidden="true"
                   >
                     {checked && (
@@ -262,18 +262,18 @@ export default function S09_TaxSavingInvestments({ data, update, goNext, goBack,
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">
                       <span className="text-base" aria-hidden="true">{emoji}</span>
-                      <span className={`text-sm font-semibold ${checked ? 'text-indigo-900' : 'text-gray-900'}`}>{label}</span>
+                      <span className={`text-sm font-semibold ${checked ? 'text-brand-900' : 'text-gray-900'}`}>{label}</span>
                       <span className="text-xs text-gray-400">{tag}</span>
                     </div>
                     <p className="text-xs text-gray-500 mt-0.5 leading-relaxed">{description}</p>
                   </div>
                 </label>
                 {checked && (
-                  <div className="px-3 pb-3 bg-indigo-50 border-t border-indigo-100">
+                  <div className="px-3 pb-3 bg-brand-50 border-t border-brand-100">
                     {/* Frequency toggle — only for items that support it */}
                     {hasFreqOption && (
                       <div className="flex items-center justify-between mt-2 mb-2">
-                        <span className="text-xs text-indigo-600 font-medium">How are you entering this?</span>
+                        <span className="text-xs text-brand-600 font-medium">How are you entering this?</span>
                         <FreqToggle
                           freq={freq}
                           onChange={newFreq => setFreq(key, newFreq)}
@@ -281,7 +281,7 @@ export default function S09_TaxSavingInvestments({ data, update, goNext, goBack,
                       </div>
                     )}
                     {!hasFreqOption && (
-                      <p className="mt-2 mb-2 text-xs text-indigo-600 font-medium">Enter the annual total.</p>
+                      <p className="mt-2 mb-2 text-xs text-brand-600 font-medium">Enter the annual total.</p>
                     )}
                     <NumberInput
                       id={key}
@@ -293,7 +293,7 @@ export default function S09_TaxSavingInvestments({ data, update, goNext, goBack,
                     />
                     {/* Annual equivalent hint when in monthly mode */}
                     {hasFreqOption && freq === 'monthly' && storedAnnual > 0 && (
-                      <p className="mt-1 text-xs text-indigo-600">
+                      <p className="mt-1 text-xs text-brand-600">
                         = ₹{fmtAnnual(storedAnnual)} per year (what we use for tax calculation)
                       </p>
                     )}
@@ -316,7 +316,7 @@ export default function S09_TaxSavingInvestments({ data, update, goNext, goBack,
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
               <div
-                className={`h-2 rounded-full transition-all duration-300 ${hitCap ? 'bg-green-500' : 'bg-indigo-600'}`}
+                className={`h-2 rounded-full transition-all duration-300 ${hitCap ? 'bg-green-500' : 'bg-brand-600'}`}
                 style={{ width: `${pctUsed}%` }}
               />
             </div>
@@ -348,7 +348,7 @@ export default function S09_TaxSavingInvestments({ data, update, goNext, goBack,
                 onClick={() => { update({ hasPersonalNPS: val }); setErrors(p => ({ ...p, hasPersonalNPS: undefined })) }}
                 className={`flex-1 py-2 rounded-xl border-2 text-sm font-semibold transition-all
                   ${data.hasPersonalNPS === val
-                    ? 'border-indigo-600 bg-indigo-50 text-indigo-700'
+                    ? 'border-brand-600 bg-brand-50 text-brand-700'
                     : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'}`}
               >
                 {label}
@@ -373,7 +373,7 @@ export default function S09_TaxSavingInvestments({ data, update, goNext, goBack,
                 required
               />
               {npsFreq === 'monthly' && Number(data.personalNPS) > 0 && (
-                <p className="text-xs text-indigo-600">
+                <p className="text-xs text-brand-600">
                   = ₹{Number(data.personalNPS).toLocaleString('en-IN')} per year
                 </p>
               )}
@@ -385,7 +385,7 @@ export default function S09_TaxSavingInvestments({ data, update, goNext, goBack,
         <button
           type="button"
           onClick={handleNext}
-          className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 active:from-indigo-800 active:to-purple-800 text-white font-bold py-3 px-6 rounded-xl text-sm transition-all shadow-md shadow-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          className="w-full bg-brand-600 hover:bg-brand-700 active:bg-brand-800 text-white font-bold py-3 px-6 rounded-xl text-sm transition-all shadow-sm shadow-brand-900/20 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
         >
           Continue →
         </button>

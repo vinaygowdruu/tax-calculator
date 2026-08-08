@@ -68,7 +68,7 @@ export default function FrequencyInput({
               onClick={() => setFreq(f)}
               className={`px-3 py-1 text-xs font-semibold transition-all rounded-full
                 ${freq === f
-                  ? 'bg-indigo-600 text-white shadow-sm'
+                  ? 'bg-brand-600 text-white shadow-sm'
                   : 'text-gray-500 hover:text-gray-700'}`}
             >
               {f === 'monthly' ? 'Monthly' : 'Per year'}
@@ -93,7 +93,7 @@ export default function FrequencyInput({
           placeholder={freq === 'monthly' ? 'Monthly amount' : placeholder}
           required={required}
           className={`block w-full rounded-xl border py-2.5 text-sm text-gray-900
-            focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 focus:outline-none
+            focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:outline-none
             placeholder:text-gray-400
             ${isValid ? 'border-green-300 bg-green-50/30' : 'border-gray-200'}
             pl-8 pr-9`}
@@ -109,7 +109,7 @@ export default function FrequencyInput({
 
       {/* Auto-calculated annual equivalent */}
       {annualEquivalent && (
-        <p className="text-xs text-indigo-600 font-medium reveal">
+        <p className="text-xs text-brand-600 font-medium reveal">
           = ₹{annualEquivalent} per year (auto-calculated)
         </p>
       )}

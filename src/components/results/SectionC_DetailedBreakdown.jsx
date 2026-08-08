@@ -55,7 +55,7 @@ function SectionHeader({ step, label }) {
   return (
     <div className="pt-4 pb-1">
       <div className="flex items-center gap-2">
-        <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-bold flex-shrink-0">
+        <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-brand-100 text-brand-700 text-xs font-bold flex-shrink-0">
           {step}
         </span>
         <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">{label}</span>
@@ -86,16 +86,16 @@ function ResultRow({ label, newVal, oldVal, isWinner, final }) {
 
   return (
     <div className="pt-2 pb-1">
-      <div className={`rounded-lg py-2.5 flex items-center ${final ? 'bg-gray-100' : 'bg-indigo-50'}`}>
-        <div className={`flex-1 pl-7 pr-3 text-xs font-semibold ${final ? 'text-gray-700' : 'text-indigo-800'}`}>
+      <div className={`rounded-lg py-2.5 flex items-center ${final ? 'bg-gray-100' : 'bg-brand-50'}`}>
+        <div className={`flex-1 pl-7 pr-3 text-xs font-semibold ${final ? 'text-gray-700' : 'text-brand-800'}`}>
           = {label}
         </div>
         <div className={`w-[27%] shrink-0 px-2 text-xs font-bold text-right
-          ${final && isNew ? 'text-green-700 text-sm' : final ? 'text-gray-700' : 'text-indigo-900'}`}>
+          ${final && isNew ? 'text-green-700 text-sm' : final ? 'text-gray-700' : 'text-brand-900'}`}>
           {newVal}
         </div>
         <div className={`w-[27%] shrink-0 pl-2 pr-3 text-xs font-bold text-right
-          ${final && isOld ? 'text-green-700 text-sm' : final ? 'text-gray-700' : 'text-indigo-900'}`}>
+          ${final && isOld ? 'text-green-700 text-sm' : final ? 'text-gray-700' : 'text-brand-900'}`}>
           {oldVal}
         </div>
       </div>
@@ -107,9 +107,9 @@ function ResultRow({ label, newVal, oldVal, isWinner, final }) {
 
 function SlabTable({ label, slabRows, totalTax, isWinner }) {
   return (
-    <div className={`rounded-lg border overflow-hidden flex flex-col ${isWinner ? 'border-indigo-200 bg-indigo-50/30' : 'border-gray-200 bg-gray-50/50'}`}>
-      <div className={`px-2 py-1.5 border-b ${isWinner ? 'border-indigo-200 bg-indigo-50' : 'border-gray-200 bg-gray-100'}`}>
-        <p className={`text-xs font-semibold ${isWinner ? 'text-indigo-700' : 'text-gray-600'}`}>
+    <div className={`rounded-lg border overflow-hidden flex flex-col ${isWinner ? 'border-brand-200 bg-brand-50/30' : 'border-gray-200 bg-gray-50/50'}`}>
+      <div className={`px-2 py-1.5 border-b ${isWinner ? 'border-brand-200 bg-brand-50' : 'border-gray-200 bg-gray-100'}`}>
+        <p className={`text-xs font-semibold ${isWinner ? 'text-brand-700' : 'text-gray-600'}`}>
           {label} {isWinner && <span className="text-green-600">✓</span>}
         </p>
       </div>
@@ -119,7 +119,7 @@ function SlabTable({ label, slabRows, totalTax, isWinner }) {
           <div
             key={i}
             className={`flex items-center px-2 py-1 text-xs gap-1
-              ${row.active ? 'bg-indigo-50/60 text-indigo-700 font-medium' : 'text-gray-400'}`}
+              ${row.active ? 'bg-brand-50/60 text-brand-700 font-medium' : 'text-gray-400'}`}
           >
             <span className="flex-1 whitespace-nowrap">{row.label}</span>
             <span className="w-8 text-center shrink-0">{row.rate}</span>
@@ -128,9 +128,9 @@ function SlabTable({ label, slabRows, totalTax, isWinner }) {
         ))}
       </div>
       {/* Total — pinned at bottom */}
-      <div className={`px-2 py-2 border-t-2 ${isWinner ? 'border-indigo-300 bg-indigo-50' : 'border-gray-300 bg-gray-100'} flex justify-between items-center`}>
-        <span className={`text-xs font-bold ${isWinner ? 'text-indigo-700' : 'text-gray-700'}`}>Total</span>
-        <span className={`text-sm font-bold ${isWinner ? 'text-indigo-800' : 'text-gray-800'}`}>₹{fmtN(totalTax)}</span>
+      <div className={`px-2 py-2 border-t-2 ${isWinner ? 'border-brand-300 bg-brand-50' : 'border-gray-300 bg-gray-100'} flex justify-between items-center`}>
+        <span className={`text-xs font-bold ${isWinner ? 'text-brand-700' : 'text-gray-700'}`}>Total</span>
+        <span className={`text-sm font-bold ${isWinner ? 'text-brand-800' : 'text-gray-800'}`}>₹{fmtN(totalTax)}</span>
       </div>
     </div>
   )
@@ -173,10 +173,10 @@ export default function SectionC_DetailedBreakdown({ results, data }) {
           {/* Column headers */}
           <div className="flex mt-3 mb-1">
             <div className="flex-1 pl-7" />
-            <div className={`w-[27%] shrink-0 px-2 text-xs font-semibold text-right ${isNewWinner ? 'text-indigo-600' : 'text-gray-400'}`}>
+            <div className={`w-[27%] shrink-0 px-2 text-xs font-semibold text-right ${isNewWinner ? 'text-brand-600' : 'text-gray-400'}`}>
               New Regime {isNewWinner && '✓'}
             </div>
-            <div className={`w-[27%] shrink-0 pl-2 text-xs font-semibold text-right ${!isNewWinner ? 'text-indigo-600' : 'text-gray-400'}`}>
+            <div className={`w-[27%] shrink-0 pl-2 text-xs font-semibold text-right ${!isNewWinner ? 'text-brand-600' : 'text-gray-400'}`}>
               Old Regime {!isNewWinner && '✓'}
             </div>
           </div>

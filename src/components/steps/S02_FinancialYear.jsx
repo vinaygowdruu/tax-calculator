@@ -7,8 +7,8 @@ export default function S02_FinancialYear({ data, goNext, goBack, reset, showPro
         {/* Question */}
         <div>
           <div className="flex items-center gap-2 mb-2">
-            <span className="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-indigo-100 text-sm">📅</span>
-            <p className="text-xs font-medium text-indigo-600 uppercase tracking-wide">Financial Year</p>
+            <span className="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-brand-100 text-sm">📅</span>
+            <p className="text-xs font-medium text-brand-600 uppercase tracking-wide">Financial Year</p>
           </div>
           <h2 className="text-xl font-bold text-gray-900 leading-tight">
             Which financial year are you calculating tax for?
@@ -17,8 +17,8 @@ export default function S02_FinancialYear({ data, goNext, goBack, reset, showPro
 
         {/* Option — single, pre-selected, locked */}
         <div>
-          <div className="flex items-start gap-3 p-4 bg-indigo-50 border-2 border-indigo-600 rounded-xl">
-            <div className="mt-0.5 w-5 h-5 rounded-full bg-indigo-600 flex items-center justify-center flex-shrink-0" aria-hidden="true">
+          <div className="flex items-start gap-3 p-4 bg-brand-50 border-2 border-brand-600 rounded-xl">
+            <div className="mt-0.5 w-5 h-5 rounded-full bg-brand-600 flex items-center justify-center flex-shrink-0" aria-hidden="true">
               <div className="w-2 h-2 rounded-full bg-white" />
             </div>
             <div>
@@ -37,7 +37,7 @@ export default function S02_FinancialYear({ data, goNext, goBack, reset, showPro
         <button
           type="button"
           onClick={goNext}
-          className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 active:from-indigo-800 active:to-purple-800 text-white font-bold py-3 px-6 rounded-xl text-sm transition-all shadow-md shadow-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          className="w-full bg-brand-600 hover:bg-brand-700 active:bg-brand-800 text-white font-bold py-3 px-6 rounded-xl text-sm transition-all shadow-sm shadow-brand-900/20 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
         >
           Continue →
         </button>

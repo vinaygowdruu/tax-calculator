@@ -11,7 +11,7 @@ export default function Quote({ seed = 0, className = '' }) {
   return (
     <figure className={`flex items-start gap-3 max-w-2xl mx-auto text-center sm:text-left ${className}`}>
       <svg
-        className="w-6 h-6 text-indigo-200 shrink-0 hidden sm:block"
+        className="w-6 h-6 text-brand-200 shrink-0 hidden sm:block"
         fill="currentColor"
         viewBox="0 0 24 24"
         aria-hidden="true"

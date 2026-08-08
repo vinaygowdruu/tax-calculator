@@ -20,9 +20,9 @@ export default function ProgressBar({ current, total, stepName }) {
             key={i}
             className={`rounded-full transition-all duration-300 ${
               i < current
-                ? 'w-2 h-2 bg-indigo-600'
+                ? 'w-2 h-2 bg-brand-600'
                 : i === current
-                  ? 'w-2 h-2 bg-indigo-300'
+                  ? 'w-2 h-2 bg-brand-300'
                   : 'w-1.5 h-1.5 bg-gray-200'
             }`}
             role="progressbar"

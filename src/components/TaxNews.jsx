@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { TAX_NEWS } from '../constants'
 
 const TAG_STYLES = {
-  Budget:   'text-indigo-700 bg-indigo-50 border-indigo-100',
+  Budget:   'text-brand-700 bg-brand-50 border-brand-100',
   Regime:   'text-green-700 bg-green-50 border-green-100',
   Deadline: 'text-amber-700 bg-amber-50 border-amber-100',
   Update:   'text-gray-700 bg-gray-100 border-gray-200',
@@ -60,14 +60,17 @@ export default function TaxNews() {
   return (
     <section className="mt-16 lg:mt-20">
       <div className="text-center mb-10">
-        <p className="text-xs font-semibold text-indigo-500 tracking-widest uppercase mb-2">Stay informed</p>
+        <p className="text-xs font-semibold text-brand-500 tracking-widest uppercase mb-2">Stay informed</p>
         <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Latest tax news</h2>
         <p className="text-sm text-gray-500 mt-2">Recent updates on Indian income-tax rules that may affect you.</p>
-        {!loading && isLive && (
-          <p className="text-xs text-green-600 mt-1">🔄 Live news · Updated daily</p>
-        )}
-        {!loading && !isLive && (
-          <p className="text-xs text-amber-600 mt-1">📌 Curated highlights</p>
+        {!loading && (
+          <p className="inline-flex items-center gap-1.5 text-xs text-gray-400 mt-2">
+            <span
+              className={`w-1.5 h-1.5 rounded-full ${isLive ? 'bg-emerald-500' : 'bg-gray-300'}`}
+              aria-hidden="true"
+            />
+            {isLive ? 'Live · updated daily' : 'Curated highlights'}
+          </p>
         )}
       </div>
 

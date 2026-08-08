@@ -52,8 +52,8 @@ export default function S06_OtherIncome({ data, update, goNext, goBack, reset, s
       <div className="space-y-4">
         <div>
           <div className="flex items-center gap-2 mb-1">
-            <span className="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-indigo-100 text-sm">💵</span>
-            <p className="text-xs font-medium text-indigo-600 uppercase tracking-wide">Other Income</p>
+            <span className="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-brand-100 text-sm">💵</span>
+            <p className="text-xs font-medium text-brand-600 uppercase tracking-wide">Other Income</p>
           </div>
           <h2 className="text-xl font-bold text-gray-900 leading-tight">
             Did your bank pay you any interest this year?
@@ -92,7 +92,7 @@ export default function S06_OtherIncome({ data, update, goNext, goBack, reset, s
                 onClick={() => { update({ hasOtherIncome: val }); setErrors({}) }}
                 className={`flex-1 py-2 rounded-xl border-2 text-sm font-semibold transition-all
                   ${data.hasOtherIncome === val
-                    ? 'border-indigo-600 bg-indigo-50 text-indigo-700'
+                    ? 'border-brand-600 bg-brand-50 text-brand-700'
                     : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'}`}
               >
                 {label}
@@ -104,7 +104,7 @@ export default function S06_OtherIncome({ data, update, goNext, goBack, reset, s
 
         {/* Conditional inputs */}
         {data.hasOtherIncome === true && (
-          <div className="reveal space-y-4 p-4 bg-blue-50 rounded-xl border border-blue-100">
+          <div className="reveal space-y-4 p-4 bg-brand-50 rounded-xl border border-brand-100">
             <div>
               <FrequencyInput
                 id="fdInterest"
@@ -125,7 +125,7 @@ export default function S06_OtherIncome({ data, update, goNext, goBack, reset, s
                 hint="Usually a small amount. Check your annual bank statement. Enter 0 if negligible."
               />
             </div>
-            <p className="text-xs text-blue-700">
+            <p className="text-xs text-brand-700">
               Tip: open your bank app → Statements → search for "Interest Credit" entries.
             </p>
           </div>
@@ -134,7 +134,7 @@ export default function S06_OtherIncome({ data, update, goNext, goBack, reset, s
         <button
           type="button"
           onClick={handleNext}
-          className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 active:from-indigo-800 active:to-purple-800 text-white font-bold py-3 px-6 rounded-xl text-sm transition-all shadow-md shadow-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          className="w-full bg-brand-600 hover:bg-brand-700 active:bg-brand-800 text-white font-bold py-3 px-6 rounded-xl text-sm transition-all shadow-sm shadow-brand-900/20 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
         >
           Continue →
         </button>

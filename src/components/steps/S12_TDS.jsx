@@ -60,8 +60,8 @@ export default function S12_TDS({ data, update, goNext, goBack, reset, showProgr
       <div className="space-y-4">
         <div>
           <div className="flex items-center gap-2 mb-1">
-            <span className="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-indigo-100 text-sm">🧾</span>
-            <p className="text-xs font-medium text-indigo-600 uppercase tracking-wide">Almost done</p>
+            <span className="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-brand-100 text-sm">🧾</span>
+            <p className="text-xs font-medium text-brand-600 uppercase tracking-wide">Almost done</p>
           </div>
           <h2 className="text-xl font-bold text-gray-900 leading-tight">
             Does your employer deduct income tax from your salary every month?
@@ -72,8 +72,8 @@ export default function S12_TDS({ data, update, goNext, goBack, reset, showProgr
           </p>
 
           {/* Plain English explainer box */}
-          <div className="mt-2 p-3 bg-blue-50 border border-blue-100 rounded-xl space-y-2">
-            <p className="text-xs font-semibold text-blue-800">How to check in 10 seconds:</p>
+          <div className="mt-2 p-3 bg-brand-50 border border-brand-100 rounded-xl space-y-2">
+            <p className="text-xs font-semibold text-brand-800">How to check in 10 seconds:</p>
             <ul className="space-y-1.5">
               {[
                 'Open your last salary slip',
@@ -81,7 +81,7 @@ export default function S12_TDS({ data, update, goNext, goBack, reset, showProgr
                 'If you see a number greater than ₹0 — select Yes below',
                 "If the field is missing or shows ₹0 — select No",
               ].map((item, i) => (
-                <li key={i} className="flex items-start gap-2 text-xs text-blue-700">
+                <li key={i} className="flex items-start gap-2 text-xs text-brand-700">
                   <span className="font-bold flex-shrink-0">{i + 1}.</span>
                   {item}
                 </li>
@@ -103,7 +103,7 @@ export default function S12_TDS({ data, update, goNext, goBack, reset, showProgr
                 onClick={() => { update({ hasTDS: val }); setErrors({}) }}
                 className={`flex-1 py-2 px-2 rounded-xl border-2 text-sm font-semibold transition-all text-center leading-tight
                   ${data.hasTDS === val
-                    ? 'border-indigo-600 bg-indigo-50 text-indigo-700'
+                    ? 'border-brand-600 bg-brand-50 text-brand-700'
                     : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'}`}
               >
                 {label}
@@ -115,7 +115,7 @@ export default function S12_TDS({ data, update, goNext, goBack, reset, showProgr
 
         {/* Amount input */}
         {data.hasTDS === true && (
-          <div className="space-y-3 p-4 bg-blue-50 rounded-xl border border-blue-100">
+          <div className="space-y-3 p-4 bg-brand-50 rounded-xl border border-brand-100">
             <NumberInput
               id="tds"
               label="Total tax deducted from your salary this financial year (April 2025 – March 2026)"
@@ -126,7 +126,7 @@ export default function S12_TDS({ data, update, goNext, goBack, reset, showProgr
               required
             />
             {errors.tdsDeducted && <p role="alert" className="mt-1 text-xs text-red-600">{errors.tdsDeducted}</p>}
-            <p className="text-xs text-blue-700">
+            <p className="text-xs text-brand-700">
               Not sure of the exact amount? Enter your best estimate. You can verify from Form 16 later.
             </p>
           </div>
@@ -143,7 +143,7 @@ export default function S12_TDS({ data, update, goNext, goBack, reset, showProgr
 
         {/* Bank TDS on FD interest — only shown if user has FD income */}
         {data.hasOtherIncome && Number(data.fdInterest) > 0 && (
-          <div className="space-y-2 p-4 bg-blue-50 rounded-xl border border-blue-100">
+          <div className="space-y-2 p-4 bg-brand-50 rounded-xl border border-brand-100">
             <p className="text-sm font-semibold text-gray-800">
               Did your bank deduct tax (TDS) on your FD interest?
             </p>
@@ -164,7 +164,7 @@ export default function S12_TDS({ data, update, goNext, goBack, reset, showProgr
         <button
           type="button"
           onClick={handleNext}
-          className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 active:from-green-800 active:to-emerald-800 text-white font-bold py-3 px-6 rounded-xl text-sm transition-all shadow-md shadow-green-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+          className="w-full bg-brand-600 hover:bg-brand-700 active:bg-brand-800 text-white font-bold py-3 px-6 rounded-xl text-sm transition-all shadow-sm shadow-brand-900/20 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
         >
           Calculate My Tax →
         </button>

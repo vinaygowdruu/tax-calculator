@@ -42,11 +42,11 @@ const FEATURES = [
 
 export default function S01_Landing({ goNext }) {
   return (
-    <div className="min-h-screen bg-[#FAFAFA] flex flex-col">
+    <div className="min-h-screen bg-[#F5F7FA] flex flex-col">
       {/* Top nav */}
       <header className="w-full max-w-7xl mx-auto px-4 sm:px-8 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
+          <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center">
             <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 11h.01M12 11h.01M15 11h.01M4 19h16a2 2 0 002-2V7a2 2 0 00-2-2H4a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
@@ -62,14 +62,14 @@ export default function S01_Landing({ goNext }) {
 
           {/* Left — copy */}
           <div className="flex flex-col">
-            <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-700 bg-indigo-50 border border-indigo-100 rounded-full px-3 py-1 w-fit mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 inline-block"></span>
+            <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-700 bg-brand-50 border border-brand-100 rounded-full px-3 py-1 w-fit mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-500 inline-block"></span>
               Know. Compare. Save.
             </div>
 
             <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-[1.1] tracking-tight mb-5">
               Find out{' '}
-              <span className="text-indigo-600 underline decoration-indigo-200 decoration-4 underline-offset-4">which tax regime</span>{' '}
+              <span className="text-brand-600 underline decoration-brand-200 decoration-4 underline-offset-4">which tax regime</span>{' '}
               saves you more money this year.
             </h1>
 
@@ -100,7 +100,7 @@ export default function S01_Landing({ goNext }) {
               <button
                 type="button"
                 onClick={goNext}
-                className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-semibold py-3.5 px-7 rounded-2xl text-sm transition-colors shadow-md shadow-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                className="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 active:bg-brand-800 text-white font-semibold py-3.5 px-7 rounded-2xl text-sm transition-colors shadow-sm shadow-brand-900/20 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
               >
                 Start calculation
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -128,9 +128,9 @@ export default function S01_Landing({ goNext }) {
           {/* Right — preview card */}
           <div className="relative">
             {/* Soft glow behind card */}
-            <div className="absolute inset-0 bg-indigo-100 rounded-3xl blur-3xl opacity-40 scale-95 translate-y-4" aria-hidden="true" />
+            <div className="absolute inset-0 bg-brand-100 rounded-3xl blur-3xl opacity-25 scale-95 translate-y-4" aria-hidden="true" />
 
-            <div className="relative bg-white rounded-3xl shadow-xl shadow-gray-200/80 border border-gray-100 p-6 sm:p-8">
+            <div className="relative bg-white rounded-3xl shadow-panel border border-gray-100 p-6 sm:p-8">
               {/* Card header */}
               <div className="flex items-center justify-between mb-6">
                 <p className="text-sm font-semibold text-gray-700">Your Tax Summary</p>
@@ -160,10 +160,10 @@ export default function S01_Landing({ goNext }) {
                   <p className="text-2xl font-bold text-gray-900">₹1,45,080</p>
                   <p className="text-xs text-gray-400 mt-0.5">Total tax</p>
                 </div>
-                <div className="p-4 rounded-2xl bg-indigo-50 border border-indigo-100">
-                  <p className="text-xs text-indigo-600 mb-1">New Tax Regime</p>
-                  <p className="text-2xl font-bold text-indigo-700">₹1,26,540</p>
-                  <p className="text-xs text-indigo-400 mt-0.5">Total tax</p>
+                <div className="p-4 rounded-2xl bg-brand-50 border border-brand-100">
+                  <p className="text-xs text-brand-600 mb-1">New Tax Regime</p>
+                  <p className="text-2xl font-bold text-brand-700">₹1,26,540</p>
+                  <p className="text-xs text-brand-400 mt-0.5">Total tax</p>
                 </div>
               </div>
 
@@ -189,13 +189,10 @@ export default function S01_Landing({ goNext }) {
               </div>
 
               {/* Annotation */}
-              <div className="absolute -bottom-8 right-8 hidden sm:block pointer-events-none select-none" aria-hidden="true">
-                <p className="text-indigo-400 text-xs italic font-medium" style={{ fontFamily: 'cursive' }}>
-                  Get results you can<br />understand, instantly.
+              <div className="absolute -bottom-7 right-8 hidden sm:block pointer-events-none select-none" aria-hidden="true">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-gray-400">
+                  Illustrative example
                 </p>
-                <svg className="w-6 h-6 text-indigo-300 ml-auto -mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 11l5-5m0 0l5 5m-5-5v12" />
-                </svg>
               </div>
             </div>
           </div>
@@ -204,7 +201,7 @@ export default function S01_Landing({ goNext }) {
         {/* Feature cards row */}
         <div className="mt-16 lg:mt-20">
           <div className="text-center mb-10">
-            <p className="text-xs font-semibold text-indigo-500 tracking-widest uppercase mb-2">Everything you need. Nothing you don't.</p>
+            <p className="text-xs font-semibold text-brand-500 tracking-widest uppercase mb-2">Everything you need. Nothing you don't.</p>
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Clarity over confusion</h2>
             <p className="text-sm text-gray-500 mt-2">We make tax simple, transparent and stress-free.</p>
           </div>
@@ -212,7 +209,7 @@ export default function S01_Landing({ goNext }) {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {FEATURES.map(({ icon, title, desc }) => (
               <div key={title} className="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-4">
+                <div className="w-10 h-10 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-4">
                   {icon}
                 </div>
                 <p className="text-sm font-semibold text-gray-900 mb-1.5 leading-snug">{title}</p>
@@ -228,7 +225,7 @@ export default function S01_Landing({ goNext }) {
         {/* Bottom trust strip */}
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
-            <div className="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0">
+            <div className="w-10 h-10 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center flex-shrink-0">
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
@@ -241,7 +238,7 @@ export default function S01_Landing({ goNext }) {
 
           <div className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
             <div className="flex -space-x-2 flex-shrink-0">
-              {['bg-indigo-200', 'bg-green-200', 'bg-amber-200'].map((c, i) => (
+              {['bg-brand-200', 'bg-green-200', 'bg-amber-200'].map((c, i) => (
                 <div key={i} className={`w-8 h-8 rounded-full ${c} border-2 border-white flex items-center justify-center`}>
                   <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />

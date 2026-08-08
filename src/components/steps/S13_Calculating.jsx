@@ -46,7 +46,7 @@ export default function S13_Calculating({ data, goNext, setResults }) {
       <div className="max-w-sm w-full space-y-8">
         {/* Spinner */}
         <div className="flex justify-center">
-          <div className="w-16 h-16 rounded-full border-4 border-indigo-100 border-t-indigo-600 animate-spin" aria-hidden="true" />
+          <div className="w-16 h-16 rounded-full border-4 border-brand-100 border-t-brand-600 animate-spin" aria-hidden="true" />
         </div>
 
         <div className="text-center">
@@ -68,7 +68,7 @@ export default function S13_Calculating({ data, goNext, setResults }) {
               >
                 {/* Status icon */}
                 <div className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center
-                  ${done ? 'bg-green-500' : active ? 'bg-indigo-600' : 'bg-gray-200'}`}
+                  ${done ? 'bg-green-500' : active ? 'bg-brand-600' : 'bg-gray-200'}`}
                   aria-hidden="true"
                 >
                   {done ? (
@@ -81,7 +81,7 @@ export default function S13_Calculating({ data, goNext, setResults }) {
                     <div className="w-2 h-2 rounded-full bg-gray-400" />
                   )}
                 </div>
-                <span className={`text-sm ${done ? 'text-green-700 font-medium' : active ? 'text-indigo-700 font-medium' : 'text-gray-400'}`}>
+                <span className={`text-sm ${done ? 'text-green-700 font-medium' : active ? 'text-brand-700 font-medium' : 'text-gray-400'}`}>
                   {label}
                 </span>
               </div>

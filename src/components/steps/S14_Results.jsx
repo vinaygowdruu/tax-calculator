@@ -15,7 +15,7 @@ export default function S14_Results({ results, data, reset, skipTo }) {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#FAFAFA]">
+    <div className="flex flex-col min-h-screen bg-[#F5F7FA]">
       {/* Sticky top bar */}
       <div className="sticky top-0 z-10 bg-white/95 backdrop-blur border-b border-gray-100 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 py-3 flex items-center gap-4">
@@ -25,7 +25,7 @@ export default function S14_Results({ results, data, reset, skipTo }) {
             className="flex items-center gap-2 shrink-0 hover:opacity-80 transition-opacity"
             aria-label="Go to home"
           >
-            <div className="w-7 h-7 bg-indigo-600 rounded-lg flex items-center justify-center">
+            <div className="w-7 h-7 bg-brand-600 rounded-lg flex items-center justify-center">
               <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 11h.01M12 11h.01M15 11h.01M4 19h16a2 2 0 002-2V7a2 2 0 00-2-2H4a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
@@ -33,7 +33,7 @@ export default function S14_Results({ results, data, reset, skipTo }) {
             <span className="text-sm font-bold text-gray-900 tracking-tight">TaxClarity</span>
           </button>
           <span className="text-sm font-semibold text-gray-700">Your Tax Result</span>
-          <span className="text-xs font-medium text-gray-500 bg-indigo-50 text-indigo-600 rounded-full px-2.5 py-1 ml-auto">
+          <span className="text-xs font-medium text-gray-500 bg-brand-50 text-brand-600 rounded-full px-2.5 py-1 ml-auto">
             FY 2025-26
           </span>
         </div>
@@ -67,7 +67,7 @@ export default function S14_Results({ results, data, reset, skipTo }) {
               <button
                 type="button"
                 onClick={() => skipTo(4)}
-                className="inline-flex items-center gap-2 text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors border border-indigo-200 rounded-xl px-5 py-2 hover:bg-indigo-50"
+                className="inline-flex items-center gap-2 text-sm font-medium text-brand-600 hover:text-brand-800 transition-colors border border-brand-200 rounded-xl px-5 py-2 hover:bg-brand-50"
               >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />

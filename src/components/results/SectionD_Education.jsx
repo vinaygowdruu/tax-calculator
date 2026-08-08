@@ -160,10 +160,10 @@ export default function SectionD_Education({ results, data }) {
             {rows.map((row, i) => (
               <div key={i} className="p-3 bg-gray-50 rounded-lg border border-gray-100">
                 <div className="flex items-start gap-2 mb-1.5">
-                  <div className="w-1.5 h-1.5 rounded-full bg-indigo-400 flex-shrink-0 mt-1.5" aria-hidden="true" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-brand-400 flex-shrink-0 mt-1.5" aria-hidden="true" />
                   <div>
                     <p className="text-sm font-semibold text-gray-800">{row.what}</p>
-                    <p className="text-xs text-indigo-600 font-medium">{row.taxName}</p>
+                    <p className="text-xs text-brand-600 font-medium">{row.taxName}</p>
                   </div>
                 </div>
                 <p className="text-xs text-gray-600 leading-relaxed ml-3.5">{row.treatment}</p>

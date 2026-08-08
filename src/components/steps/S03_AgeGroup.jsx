@@ -59,8 +59,8 @@ export default function S03_AgeGroup({ data, update, goNext, goBack, reset, show
         {/* Question */}
         <div>
           <div className="flex items-center gap-2 mb-2">
-            <span className="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-indigo-100 text-sm">🎂</span>
-            <p className="text-xs font-medium text-indigo-600 uppercase tracking-wide">About You</p>
+            <span className="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-brand-100 text-sm">🎂</span>
+            <p className="text-xs font-medium text-brand-600 uppercase tracking-wide">About You</p>
           </div>
           <h2 className="text-xl font-bold text-gray-900 leading-tight">
             Which age group do you fall in?
@@ -81,7 +81,7 @@ export default function S03_AgeGroup({ data, update, goNext, goBack, reset, show
                   key={option.value}
                   className={`flex items-start gap-3 p-4 rounded-xl border-2 cursor-pointer transition-all
                     ${selected
-                      ? 'border-indigo-600 bg-indigo-50'
+                      ? 'border-brand-600 bg-brand-50'
                       : 'border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50'
                     }`}
                 >
@@ -95,7 +95,7 @@ export default function S03_AgeGroup({ data, update, goNext, goBack, reset, show
                   />
                   {/* Custom radio */}
                   <div className={`mt-0.5 w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-colors
-                    ${selected ? 'border-indigo-600 bg-indigo-600' : 'border-gray-300 bg-white'}`}
+                    ${selected ? 'border-brand-600 bg-brand-600' : 'border-gray-300 bg-white'}`}
                     aria-hidden="true"
                   >
                     {selected && <div className="w-2 h-2 rounded-full bg-white" />}
@@ -103,11 +103,11 @@ export default function S03_AgeGroup({ data, update, goNext, goBack, reset, show
 
                   <div className="flex-1">
                     <div className="flex items-center gap-2 flex-wrap">
-                      <span className={`text-sm font-semibold ${selected ? 'text-indigo-900' : 'text-gray-900'}`}>
+                      <span className={`text-sm font-semibold ${selected ? 'text-brand-900' : 'text-gray-900'}`}>
                         {option.label}
                       </span>
                       {option.tag && (
-                        <span className="text-xs font-medium text-indigo-600 bg-indigo-100 rounded-full px-2 py-0.5">
+                        <span className="text-xs font-medium text-brand-600 bg-brand-100 rounded-full px-2 py-0.5">
                           {option.tag}
                         </span>
                       )}
@@ -128,7 +128,7 @@ export default function S03_AgeGroup({ data, update, goNext, goBack, reset, show
         <button
           type="button"
           onClick={handleNext}
-          className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 active:from-indigo-800 active:to-purple-800 text-white font-bold py-3 px-6 rounded-xl text-sm transition-all shadow-md shadow-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          className="w-full bg-brand-600 hover:bg-brand-700 active:bg-brand-800 text-white font-bold py-3 px-6 rounded-xl text-sm transition-all shadow-sm shadow-brand-900/20 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
         >
           Continue →
         </button>

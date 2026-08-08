@@ -68,8 +68,8 @@ export default function S04_SalaryDetails({ data, update, goNext, goBack, reset,
       <div className="space-y-4">
         <div>
           <div className="flex items-center gap-2 mb-1">
-            <span className="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-indigo-100 text-sm">💰</span>
-            <p className="text-xs font-medium text-indigo-600 uppercase tracking-wide">Your Salary</p>
+            <span className="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-brand-100 text-sm">💰</span>
+            <p className="text-xs font-medium text-brand-600 uppercase tracking-wide">Your Salary</p>
           </div>
           <h2 className="text-xl font-bold text-gray-900 leading-tight">What does your salary look like?</h2>
           <p className="mt-1.5 text-sm text-gray-500">
@@ -113,9 +113,9 @@ export default function S04_SalaryDetails({ data, update, goNext, goBack, reset,
 
         {/* Live annual preview */}
         {annualTakeHome > 0 && (
-          <div className="reveal px-4 py-2.5 bg-indigo-50 border border-indigo-100 rounded-xl flex items-center justify-between">
-            <span className="text-xs text-indigo-700">Your annual take-home</span>
-            <span className="text-sm font-bold text-indigo-800">
+          <div className="reveal px-4 py-2.5 bg-brand-50 border border-brand-100 rounded-xl flex items-center justify-between">
+            <span className="text-xs text-brand-700">Your annual take-home</span>
+            <span className="text-sm font-bold text-brand-800">
               ₹{annualTakeHome.toLocaleString('en-IN')}
             </span>
           </div>
@@ -168,7 +168,7 @@ export default function S04_SalaryDetails({ data, update, goNext, goBack, reset,
                 onClick={() => { update({ hasBonus: val, bonus: val ? data.bonus : '' }); clearError('hasBonus') }}
                 className={`flex-1 py-2.5 px-2 rounded-xl border-2 text-sm font-semibold transition-all text-center leading-tight
                   ${data.hasBonus === val
-                    ? 'border-indigo-600 bg-indigo-50 text-indigo-700'
+                    ? 'border-brand-600 bg-brand-50 text-brand-700'
                     : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'}`}
               >
                 {label}
@@ -179,7 +179,7 @@ export default function S04_SalaryDetails({ data, update, goNext, goBack, reset,
 
           {data.hasBonus === true && (
             <div className="reveal space-y-3">
-              <div className="p-4 bg-blue-50 rounded-xl border border-blue-100 space-y-3">
+              <div className="p-4 bg-brand-50 rounded-xl border border-brand-100 space-y-3">
                 <FrequencyInput
                   id="bonus"
                   label="How much extra do you receive in total?"
@@ -192,9 +192,9 @@ export default function S04_SalaryDetails({ data, update, goNext, goBack, reset,
                 {errors.bonus && <p role="alert" className="mt-1 text-xs text-red-600">{errors.bonus}</p>}
 
                 {/* Not sure helper */}
-                <div className="p-2.5 bg-white rounded-lg border border-blue-100">
-                  <p className="text-xs font-medium text-blue-800 mb-1">Not sure of the exact amount?</p>
-                  <p className="text-xs text-blue-700 leading-relaxed">
+                <div className="p-2.5 bg-white rounded-lg border border-brand-100">
+                  <p className="text-xs font-medium text-brand-800 mb-1">Not sure of the exact amount?</p>
+                  <p className="text-xs text-brand-700 leading-relaxed">
                     Check your salary slips for any months where the credit was higher than usual — that difference is your bonus/incentive. Enter your best estimate; you can always come back and adjust.
                   </p>
                 </div>
@@ -229,7 +229,7 @@ export default function S04_SalaryDetails({ data, update, goNext, goBack, reset,
         <button
           type="button"
           onClick={handleNext}
-          className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 active:from-indigo-800 active:to-purple-800 text-white font-bold py-3 px-6 rounded-xl text-sm transition-all shadow-md shadow-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          className="w-full bg-brand-600 hover:bg-brand-700 active:bg-brand-800 text-white font-bold py-3 px-6 rounded-xl text-sm transition-all shadow-sm shadow-brand-900/20 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
         >
           Continue →
         </button>
